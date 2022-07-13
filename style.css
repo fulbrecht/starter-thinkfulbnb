@@ -64,6 +64,7 @@ header {
 .logo {
   font-family: "Pangolin", cursive;
   font-size: 72px;
+  font-size: 15vw;
   color: #fff;
 }
 
@@ -100,12 +101,13 @@ form {
 
 form label {
   font-weight: bold;
+  width: 100%;
 }
 
 form select,
 form input {
-  margin-bottom: 20px;
-  width: 180px;
+  width: min(100%, 180px);
+  font-size: min(2vw, 16px);
 }
 
 form button {
@@ -136,6 +138,15 @@ footer p {
 
 /* -------  Media Query ------- */
 @media all and (min-width: 480px) {
+  .logo {
+    font-size: min(7vw, 72px);
+    align-self:center;
+  }
+
+  nav ul {
+    font-size: min(3vw, 20px);
+  }
+ 
   header {
     display: flex;
     justify-content: space-between;
@@ -159,9 +170,18 @@ footer p {
     display:flex;
   }
 
+  form button {
+    font-size: min(24px, 2vw);
+  }
   form div {
     flex-direction: column;
   }
+
+  select,
+  input {
+    font-size: min(2vw, 16px);
+  }
+
 
   .group {
     flex-direction: row;
